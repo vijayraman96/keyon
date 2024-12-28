@@ -955,3 +955,8 @@ footer .text_container .icon img {
     }
 
 }
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 97vw;
+    }
+}
