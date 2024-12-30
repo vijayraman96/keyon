@@ -650,7 +650,7 @@ footer .text_container .icon img {
 
 @media(min-width: 1201px) and (max-width: 1300px) {
     .transport_app {
-   height: 1700px;
+   height: 1570px;
     }
     .transport_app .card_row {
         padding: 0 35px;
@@ -729,7 +729,7 @@ footer .text_container .icon img {
 
 @media (min-width: 1401px) and (max-width: 1700px) {
     .woman_traveler {
-        width: 45vw;
+        width: 39vw;
     }
     .reason .blue_card {
         width: 400px;
@@ -739,11 +739,11 @@ footer .text_container .icon img {
         height: 500px
     }
     .transport_app .card {
-        width: 41vw;
-        height: 42vw
+        width: 37vw;
+        height: 37vw
     }
     .transport_app .card .image_container {
-        height: 22vw
+        height: 19vw
     }
     .transport_app {
         height: 190vh;
@@ -752,8 +752,8 @@ footer .text_container .icon img {
         max-width: 1650px;
     }
     .reason .blue_card {
-        width: 28vw;
-        height: 26vw;
+        width: 25vw;
+        height: 23.5vw;
     }
 }
 @media (min-width: 1701px) and (max-width: 2000px) {
@@ -775,10 +775,10 @@ footer .text_container .icon img {
         height: 17vw
     }
     .transport_app {
-        height: 160vh;
+        height: 180vh;
     }
     .transport_app .card .image_container .card_title {
-        font-size: 45px;    
+        font-size: 38px;    
     }
     .transport_app .card .image_container .card_para {
         font-size: 22px;
@@ -801,12 +801,12 @@ footer .text_container .icon img {
     }
    
     .reason .blue_card {
-        width: 23.5vw;
+        width: 22.5vw;
         background-image: url(./assets/images/blue_card.png);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        height: 22vw;
+        height: 21vw;
         margin: 3% 1% 3% 0;
     }
    
