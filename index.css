@@ -22,6 +22,7 @@ body {
     --black: #000;
     --white: #fff;
     --grey: #1F1F1F;
+    --grey1a1a1a: #1a1a1a;
     --grey777: #777777;
     --font-manrope: "Manrope", sans-serif;
     --font-poppins: "Poppins", sans-serif;
@@ -62,16 +63,48 @@ header picture{
 width: 200px;
 margin: 0 auto 0 50%
 }
+.closes {
+    display: none;
+}
+.navbar-toggler {
+    background-color: transparent !important;
+}
+
+/* Make sure both icons are displayed in their correct orientation */
+.hamburger,
+.closes {
+    width: 30px; /* Adjust size of the icons as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* When navbar is collapsed (menu is closed), show the hamburger icon and hide the close icon */
+.navbar-toggler.collapsed .hamburger {
+    display: block;
+}
+
+.navbar-toggler.collapsed .closes {
+    display: none;
+}
+
+/* When navbar is expanded (menu is open), show the close icon and hide the hamburger icon */
+.navbar-toggler:not(.collapsed) .hamburger {
+    display: none;
+}
+
+.navbar-toggler:not(.collapsed) .closes {
+    display: block;
+}
 
 .demo_btn {
     width: 235px;
-    height: 65px;
+    height: 50px;
     border-radius: 50px;
    display: flex;
    justify-content: center;
    align-items: center;
    padding: 20px 40px;
    text-decoration: none;
+   font-size: var(--fs18);
    background: linear-gradient(to right, var(--button_left_linear) , var(--button_right_linear));
    color: var(--white)
 }
@@ -145,6 +178,27 @@ main a {
 .logo_container img {
     width: 220px;
     margin: 0 30px;
+}
+.growing_community {
+    background: linear-gradient(to right, #1583CA, #2A35B3);
+    padding: 30px 0;
+    text-align: center;
+}
+.growing_community .title {
+    font-size: var(--fs24);
+    font-family: var(--font-poppins);
+    color: var(--white);
+    font-weight: var(--w700);
+    padding: 15px 0;
+}
+.growing_community .para {
+    font-size: var(--fs18);
+    font-family: var(--font-poppins);
+    color: var(--white);
+    font-weight: var(--w400);
+    padding: 0px 0 0px 0;
+    width: 100%;
+    margin: 0 auto;
 }
 .office_commute {
     padding: 100px 0
@@ -255,16 +309,16 @@ justify-content: space-between;
     
 }
 .transport_app .card1 {
-    background-image: url('./assets/images/card1.png');
+    background-image: url('./assets/images/traveler_woman.png');
 }
 .transport_app .card2 {
-    background-image: url('./assets/images/card2.png');
+    background-image: url('./assets/images/mask2.png');
 }
 .transport_app .card3 {
-    background-image: url('./assets/images/card3.png');
+    background-image: url('./assets/images/mask3.png');
 }
 .transport_app .card4 {
-    background-image: url('./assets/images/card4.png');
+    background-image: url('./assets/images/mask4.png');
 }
 
 .transport_app .card .image_container {
@@ -363,7 +417,7 @@ justify-content: space-between;
 }
 .reason .blue_card .text_container .title {
     color: var(--white);
-    font-size: var(--fs32);
+    font-size: var(--fs28);
     font-family: var(--font-poppins);
     font-weight: var(--w800);
     text-align: left;
@@ -375,6 +429,51 @@ justify-content: space-between;
     font-family: var(--font-poppins);
     font-weight: var(--w400);
     text-align: left;
+}
+.cutomers_talks .title_container{
+    padding: 0 0 50px 0
+}
+.cutomers_talks .title_container .sub_title {
+    color: var(--black304659);
+    font-size: var(--fs32);
+    font-family: var(--font-poppins);
+    font-weight: var(--w800);
+    margin: 8px 0;
+}
+.cutomers_talks .title_container .title {
+    color: var(--black304659);
+    font-size: var(--fs40);
+    font-family: var(--font-poppins);
+    font-weight: var(--w800);
+}
+.cutomers_talks .card {
+    width: 30vw;
+    height: 33vw;
+    text-align: center;
+    padding: 5vw 2vw;
+    border-radius: 50px;
+}
+.cutomers_talks .card img {
+    width: 8vw;
+    height: 9vw;
+    object-fit: cover;
+    padding: 20px 0 0 0;
+    margin: 6vw 0 0 0
+}
+.cutomers_talks .card .text-container .title {
+    color: var(--grey1a1a1a);
+    font-size: var(--fs24);
+    font-family: var(--font-poppins);
+    font-weight: var(--w700);
+    height: 4vw;
+}
+.cutomers_talks .card .text-container .para {
+    color: var(--grey1a1a1a);
+    font-size: var(--fs18);
+    font-family: var(--font-poppins);
+    font-weight: var(--w400);
+    /* padding: 30px 0; */
+    height: 5vw
 }
 .carousel {
     padding: 0px 30px 30px 0; 
@@ -646,6 +745,18 @@ footer .text_container .icon img {
     .container, .container-lg, .container-md, .container-sm {
         max-width: 95vw;
     }
+    .cutomers_talks .card {
+        width: 30vw;
+        height: 38vw;
+        text-align: center;
+        padding: 5vw 2vw;
+        border-radius: 50px;
+    }
+    .cutomers_talks .card .text-container .para {
+        margin: 3vw 0 0vw 0;
+        height: 7vw;
+    }
+    
 }
 
 @media(min-width: 1201px) and (max-width: 1300px) {
@@ -688,11 +799,14 @@ footer .text_container .icon img {
         margin: 0;
         padding: 0
     }
+    .growing_community .para {
+        width: 60%
+    }
 }
-@media(min-width: 1301px) and (max-width: 1400px) {
+@media(min-width: 1301px) and (max-width: 1450px) {
     .transport_app .card {
-        width: 520px;
-        height: 550px;
+        width: 42vw;
+        height: 42vw;
     }
     .reason .blue_card {
         width: 30vw;
@@ -705,7 +819,7 @@ footer .text_container .icon img {
     }
     .transport_app .card .image_container {
         width: 100%;
-    height: 264px;
+    height: 22.5vw;
 
     }
     .reason .blue_card {
@@ -717,6 +831,10 @@ footer .text_container .icon img {
         height: 27vw;
         margin: 3% 1% 3% 0;
     }
+    .growing_community .para {
+        width: 90%
+    }
+   
  }
 @media (min-width: 1400px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
@@ -727,7 +845,7 @@ footer .text_container .icon img {
     }
 }
 
-@media (min-width: 1401px) and (max-width: 1700px) {
+@media (min-width: 1451px) and (max-width: 1700px) {
     .woman_traveler {
         width: 39vw;
     }
@@ -743,18 +861,25 @@ footer .text_container .icon img {
         height: 37vw
     }
     .transport_app .card .image_container {
-        height: 19vw
+        height: 19.2vw
     }
     .transport_app {
-        height: 190vh;
+        height: 183vh;
     }
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-        max-width: 1650px;
+        max-width: 1440px;
     }
     .reason .blue_card {
         width: 25vw;
         height: 23.5vw;
     }
+    .cutomers_talks .card {
+        width: 27vw !important
+    }
+    .cutomers_talks .card img {
+        margin: 5vw 0 0 0;
+    }
+
 }
 @media (min-width: 1701px) and (max-width: 2000px) {
     .woman_traveler {
@@ -809,13 +934,24 @@ footer .text_container .icon img {
         height: 21vw;
         margin: 3% 1% 3% 0;
     }
+    .cutomers_talks .card {
+        width: 23vw !important;
+        height: 30vw;;
+    }
+    .cutomers_talks .card img {
+        margin: 4vw 0 0 0;
+    }
    
 }
 
 @media(max-width: 750px) {
+    .growing_community .para {
+        width: 90%;
+    }
     .navbar-toggler  {
         background-color: var(--black);
     }
+
     .navbar-collapse {
         background: linear-gradient(to bottom,  #1583CA, #2A35B3);
         padding: 30px 0;
@@ -835,7 +971,7 @@ box-shadow: 1px 3px 12px 2px rgba(21,131,202,0.46);
         display: none !important;
     }
     .banner_title {
-        font-size: 50px;
+        font-size: 35px;
         width: 80%;
         margin: 0 auto;
     }
@@ -885,7 +1021,7 @@ box-shadow: 1px 3px 12px 2px rgba(21,131,202,0.46);
         width: 100%;
     }
     .office_commute .header_text .title {
-        font-size: var(--fs40);
+        font-size: 30px;
         width: 80%;
         margin: 0 auto;
         font-weight: var(--w800);
@@ -916,13 +1052,14 @@ box-shadow: 1px 3px 12px 2px rgba(21,131,202,0.46);
     }
     .transport_app {
         margin: 0 1em;
-        height: 2300px;
+        height: 2200px;
     }
     .transport_app .sub_title {
         font-size: var(--fs20);
     }
     .transport_app .title {
-        font-size: var(--fs32);
+        font-size: var(--fs24);
+        line-height: 40px;
     }
     .transport_app .card_row {
         padding: 0 15px;
@@ -948,7 +1085,8 @@ box-shadow: 1px 3px 12px 2px rgba(21,131,202,0.46);
         height: 356px;
     }
     .reason .text_container .title {
-        padding: 0
+        padding: 0;
+        font-size: 30px;
     }
     .reason .blue_card .text_container {
         padding:0% 0% 5% 3%;
@@ -959,6 +1097,13 @@ box-shadow: 1px 3px 12px 2px rgba(21,131,202,0.46);
     .reason {
         height: 2220px;
         padding: 100px 15px;
+    }
+    .cutomers_talks .title_container .title {
+        font-size: 30px;
+        font-weight: var(--w400);
+    }
+    .harmony .text_container .title {
+        font-size: 30px;
     }
     .carousel{
         padding: 0;
@@ -1002,6 +1147,32 @@ box-shadow: 1px 3px 12px 2px rgba(21,131,202,0.46);
     header .navbar-brand img {
         margin-left: 35vw
     }
+    .cutomers_talks .card {
+        width: 95vw !important;
+        height: 90vw;
+        padding: 12vw 2vw;
+        margin: 4vw 0;
+    }
+    .cutomers_talks .mt-5 {
+        margin: 0 !important
+    }
+    .cutomers_talks .card img {
+        width: 35vw;
+        height: 37vw;
+        object-fit: cover;
+      margin: 22vw 0 0 0
+    }
+    .cutomers_talks .card {
+        width: 95vw !important;
+        height: 103vw;
+        padding: 12vw 2vw;
+        margin: 4vw 0;
+    }
+    .cutomers_talks .card .text-container .para {
+        margin: 9vw 0 0 0
+    }
+    
+    
 
 }
 @media (min-width: 1200px) and (max-width: 1400px) {
