@@ -43,6 +43,7 @@ body {
     --fs28: 28px;
     --fs32: 32px;
     --fs40: 40px;
+    --fs48: 48px;
     --fs50: 50px;
     --fs60: 60px;
     --title_padding: 20px 0;
@@ -94,7 +95,9 @@ margin: 0 auto 0 50%
 .navbar-toggler:not(.collapsed) .closes {
     display: block;
 }
-
+.nav-link.active {
+    font-weight: var(--w700) !important;
+}
 .demo_btn {
     width: 235px;
     height: 50px;
@@ -447,25 +450,25 @@ justify-content: space-between;
     font-weight: var(--w800);
 }
 .cutomers_talks .card {
-    width: 30vw;
-    height: 33vw;
+    width: 91%;
+    height: 100%;
     text-align: center;
-    padding: 5vw 2vw;
+    padding: 80px 15px;
     border-radius: 50px;
 }
 .cutomers_talks .card img {
-    width: 8vw;
-    height: 9vw;
+    width: 95px;
+    height: 115px;
     object-fit: cover;
     padding: 20px 0 0 0;
-    margin: 6vw 0 0 0
+    margin: 30px 0 0 0
 }
 .cutomers_talks .card .text-container .title {
     color: var(--grey1a1a1a);
     font-size: var(--fs24);
     font-family: var(--font-poppins);
     font-weight: var(--w700);
-    height: 4vw;
+    height: 50px;
 }
 .cutomers_talks .card .text-container .para {
     color: var(--grey1a1a1a);
@@ -473,7 +476,8 @@ justify-content: space-between;
     font-family: var(--font-poppins);
     font-weight: var(--w400);
     /* padding: 30px 0; */
-    height: 5vw
+    height: 140px;
+    margin: 40px 0 0 0
 }
 .carousel {
     padding: 0px 30px 30px 0; 
@@ -877,7 +881,11 @@ footer .text_container .icon img {
         width: 27vw !important
     }
     .cutomers_talks .card img {
-        margin: 5vw 0 0 0;
+        margin: 0vw 0 0 0;
+    }
+    .cutomers_talks .card .text-container .para {
+        margin: 15px 0 0 0;
+        height: 100px;
     }
 
 }
@@ -936,15 +944,22 @@ footer .text_container .icon img {
     }
     .cutomers_talks .card {
         width: 23vw !important;
-        height: 30vw;;
+        height: 24vw;
     }
     .cutomers_talks .card img {
-        margin: 4vw 0 0 0;
+        margin: 0vw 0 0 0;
+    }
+    .cutomers_talks .card .text-container .para {
+        height: 90px
     }
    
 }
 
 @media(max-width: 750px) {
+    .navbar {
+        height: 60px;
+        padding: 0
+    }
     .growing_community .para {
         width: 90%;
     }
@@ -959,6 +974,7 @@ footer .text_container .icon img {
         -webkit-box-shadow: 1px 3px 12px 2px rgba(21,131,202,0.46);
 -moz-box-shadow: 1px 3px 12px 2px rgba(21,131,202,0.46);
 box-shadow: 1px 3px 12px 2px rgba(21,131,202,0.46);
+z-index: 100;
     }
     .navbar-nav {
         justify-content: start !important;
@@ -1052,14 +1068,14 @@ box-shadow: 1px 3px 12px 2px rgba(21,131,202,0.46);
     }
     .transport_app {
         margin: 0 1em;
-        height: 2200px;
+        height: 503vw;
     }
     .transport_app .sub_title {
-        font-size: var(--fs20);
+        font-size: 7vw;
     }
     .transport_app .title {
-        font-size: var(--fs24);
-        line-height: 40px;
+        font-size: var(--fs18);
+        line-height: 30px;
     }
     .transport_app .card_row {
         padding: 0 15px;
@@ -1069,8 +1085,8 @@ box-shadow: 1px 3px 12px 2px rgba(21,131,202,0.46);
         height: 400px;
     }
     .transport_app .card .image_container {
-        width: 98%;
-        height: 178px;
+        width: 79vw;
+        height: 43vw;
     }
     .transport_app .card .image_container .card_title {
         font-size: var(--fs20);
@@ -1078,15 +1094,16 @@ box-shadow: 1px 3px 12px 2px rgba(21,131,202,0.46);
     }
     .transport_app .card .image_container .card_para {
         font-size: 14px;
-        margin: 2px 0;
+        margin: 10px 0 5px 0; 
     }
     .reason .blue_card {
-        width: 100%;
-        height: 356px;
+        width: 91vw;
+        height: 85vw;
     }
     .reason .text_container .title {
         padding: 0;
-        font-size: 30px;
+        font-size: 7vw !important;
+        
     }
     .reason .blue_card .text_container {
         padding:0% 0% 5% 3%;
@@ -1095,15 +1112,21 @@ box-shadow: 1px 3px 12px 2px rgba(21,131,202,0.46);
         display: block;
     }
     .reason {
-        height: 2220px;
+        height: 530vw;
         padding: 100px 15px;
     }
     .cutomers_talks .title_container .title {
-        font-size: 30px;
+        font-size: var(--fs18);
+        line-height: 25px;;
         font-weight: var(--w400);
     }
     .harmony .text_container .title {
-        font-size: 30px;
+        font-size: 7vw;
+    }
+    .harmony .text_container .sub_title {
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: 400;
     }
     .carousel{
         padding: 0;
@@ -1160,18 +1183,28 @@ box-shadow: 1px 3px 12px 2px rgba(21,131,202,0.46);
         width: 35vw;
         height: 37vw;
         object-fit: cover;
-      margin: 22vw 0 0 0
+      margin: 0vw 0 0 0
     }
     .cutomers_talks .card {
         width: 95vw !important;
-        height: 103vw;
+        height: 110vw;
         padding: 12vw 2vw;
         margin: 4vw 0;
     }
-    .cutomers_talks .card .text-container .para {
-        margin: 9vw 0 0 0
+    .cutomers_talks .card .text-container .title {
+        height: 9vw;
     }
-    
+    .cutomers_talks .card .text-container .para {
+        margin: 8vw 0 0 0;
+        height: 100px;
+    }
+    .reason .blue_card .text_container .para {
+        font-size: 4vw;
+    }
+    .cutomers_talks .title_container .sub_title {
+        font-size: 7vw;
+        margin: 17vw 0 0 0
+    }
     
 
 }
@@ -1180,3 +1213,9 @@ box-shadow: 1px 3px 12px 2px rgba(21,131,202,0.46);
         max-width: 97vw;
     }
 }
+@media(max-width: 400px) {
+    .transport_app {
+        height: 310vh
+    }
+}
+
